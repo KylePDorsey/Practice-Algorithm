@@ -29,7 +29,6 @@ def convert_to_roman(arabic_number)
 	roman = []
 	remaining_integer = arabic_number
 	loop do 
-		p roman
 		break if remaining_integer == 0
 		if remaining_integer >= 1000
 			roman.push("M")
@@ -51,6 +50,7 @@ def convert_to_roman(arabic_number)
 			remaining_integer -= 1
 		end
 	end
+	roman.join
 end
 
 p convert_to_roman(1500)
