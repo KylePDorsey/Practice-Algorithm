@@ -37,12 +37,29 @@ def convert_to_roman(arabic_number)
 		elsif remaining_integer >= 500
 			roman.push("D")
 			remaining_integer -= 500	
+		elsif remaining_integer >= 100
+			roman.push("C")
+			remaining_integer -= 100
+		elsif remaining_integer >= 50
+			roman.push("L")
+			remaining_integer -= 50
+		elsif remaining_integer >= 5
+			roman.push("V")
+			remaining_integer -= 5
+		elsif remaining_integer >= 1
+			roman.push("I")
+			remaining_integer -= 1
 		end
 	end
 end
 
 p convert_to_roman(1500)
-
+p "---------------------"
+p convert_to_roman(4)
+p "---------------------"
+p convert_to_roman(123)
+p "---------------------"
+p convert_to_roman(4999)
 
 
 
