@@ -24,8 +24,7 @@
 
 #Start with the largest possible number to remove and break it down futher and futher
 
-
-def convert_to_roman(arabic_number)
+def convert_to_roman(arabic_number, roman_style = "old")
 	roman = []
 	remaining_integer = arabic_number
 	loop do 
@@ -50,7 +49,11 @@ def convert_to_roman(arabic_number)
 			remaining_integer -= 1
 		end
 	end
-	roman.join
+	roman = roman.join
+	if roman_style == "Modern"
+		modern_format(roman)
+	end
+	roman
 end
 
 p convert_to_roman(1500)
